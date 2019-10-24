@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1909947956707083003}
   - component: {fileID: 1909947956707083002}
-  - component: {fileID: 1909947956707082996}
   - component: {fileID: 1909947956707082997}
   m_Layer: 0
   m_Name: Box_amber
@@ -82,24 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1909947956707082996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909947956707083001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adbb597c2b6b8b140beea60fbd48923b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubeSize: 0.2
-  cubesInRow: 10
-  box: {fileID: 1909947956707083001}
-  explosionForce: 50
-  explosionRadius: 20
-  explosionUpward: 0
 --- !u!61 &1909947956707082997
 BoxCollider2D:
   m_ObjectHideFlags: 0

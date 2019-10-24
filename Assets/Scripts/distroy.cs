@@ -1,5 +1,5 @@
 ﻿
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,7 @@ public class distroy : MonoBehaviour {
     float cubesPivotDistance;
     Vector3 cubesPivot;
 
+    public GameObject box;
     public float explosionForce = 50f;
     public float explosionRadius = 20f;
     public float explosionUpward = 0f;
@@ -57,7 +58,7 @@ public class distroy : MonoBehaviour {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null) {
                 //add explosion force to this body with given parameters
-                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
+                rb.AddExplosionForce(200, transform.position, explosionRadius, 0);
             }
         }
 

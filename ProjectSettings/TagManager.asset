@@ -8,6 +8,9 @@ TagManager:
   - Cube_blue
   - Cube_yellow
   - Cube_green
+  - one
+  - two
+  - three
   layers:
   - Default
   - TransparentFX
