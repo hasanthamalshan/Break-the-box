@@ -11,6 +11,7 @@ public class SpawnBoxes_Easy : MonoBehaviour
     GameObject obj;
        
     void Start(){
+        HealthBar.healthloss = 5f;
         Vector3 Boxpos = new Vector3(Random.Range(topLeft.position.x,bottomRight.position.x),Random.Range(bottomRight.position.y,topLeft.position.y),0); 
         obj = Instantiate(spawnee[2],Boxpos,Quaternion.identity);
         isSpawnon = false;
@@ -22,7 +23,8 @@ public class SpawnBoxes_Easy : MonoBehaviour
          Vector2 pos = Input.mousePosition;
          Collider2D hitCollider = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(pos));
             if (hitCollider != null) {
-                GameObject.Destroy(obj);  
+                GameObject.Destroy(obj); 
+                HealthBar.health = HealthBar.health + 50f; 
                 isSpawnon = true; 
             }
             if(isSpawnon){
