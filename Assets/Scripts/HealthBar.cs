@@ -22,7 +22,7 @@ public class HealthBar : MonoBehaviour
        if(health < 400f){
            healthbar.color = Color.red;
        }
-       if(health == 0){
+       if(health <= 0){
            GameManager.isGameOver = true;
        }
    }

@@ -11,7 +11,7 @@ public class SpawnBoxes_Easy : MonoBehaviour
     GameObject obj;
        
     void Start(){
-        HealthBar.healthloss = 5f;
+        HealthBar.healthloss = 3f;
         Vector3 Boxpos = new Vector3(Random.Range(topLeft.position.x,bottomRight.position.x),Random.Range(bottomRight.position.y,topLeft.position.y),0); 
         obj = Instantiate(spawnee[2],Boxpos,Quaternion.identity);
         isSpawnon = false;

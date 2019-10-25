@@ -14,6 +14,7 @@ public class SpawnBoxes_Normal : MonoBehaviour
     GameObject obj2;
        
     void Start(){
+        HealthBar.healthloss = 2.5f;
         Vector3 Boxpos1 = new Vector3(Random.Range(topLeft.position.x,bottomRight.position.x),Random.Range(bottomRight.position.y,topLeft.position.y),0); 
         obj1 = Instantiate(spawnee[2],Boxpos1,Quaternion.identity);
         obj1.tag = "one";
@@ -26,7 +27,7 @@ public class SpawnBoxes_Normal : MonoBehaviour
     }
     void Update()
     {   
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver) {
          int num1 = Random.Range(0,8);
          int num2 = Random.Range(0,8);
          Vector2 pos = Input.mousePosition;
