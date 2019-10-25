@@ -19,5 +19,11 @@ public class HealthBar : MonoBehaviour
    private void Update() {
        healthbar.fillAmount = health / maxhealth ;
        health = health - healthloss;
+       if(health < 400f){
+           healthbar.color = Color.red;
+       }
+       if(health == 0){
+           GameManager.isGameOver = true;
+       }
    }
 }

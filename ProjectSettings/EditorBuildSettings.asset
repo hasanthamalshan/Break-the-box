@@ -5,6 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/welcome.unity
+    guid: 5f788575c5cdde5469d8d1e27f2b16f7
+  - enabled: 1
+    path: Assets/Scenes/welcome.unity
+    guid: 4b88d65d40dd3574eacd859059ced1ae
+  - enabled: 1
+    path: Assets/Scenes/countdown.unity
+    guid: 7b0a19419b1d6604f9b2e684ed2b0b39
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 2cda990e2423bbf4892e6590ba056729

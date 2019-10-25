@@ -18,13 +18,14 @@ public class SpawnBoxes_Easy : MonoBehaviour
     }
     void Update()
     {   
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver) {
          int num = Random.Range(0,8);
          Vector2 pos = Input.mousePosition;
          Collider2D hitCollider = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(pos));
             if (hitCollider != null) {
                 GameObject.Destroy(obj); 
                 HealthBar.health = HealthBar.health + 50f; 
+                GameManager.score++;
                 isSpawnon = true; 
             }
             if(isSpawnon){

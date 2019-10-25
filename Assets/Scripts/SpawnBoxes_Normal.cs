@@ -42,6 +42,8 @@ public class SpawnBoxes_Normal : MonoBehaviour
                 }
                 if(boxone && boxtwo){
                     isSpawnon = true; 
+                    HealthBar.health = HealthBar.health + 50f; 
+                    GameManager.score++;
                 }
             }
             if(isSpawnon){

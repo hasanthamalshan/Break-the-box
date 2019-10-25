@@ -53,6 +53,8 @@ public class SpawnBoxes_Expert : MonoBehaviour
                 }
                 if(boxone && boxtwo && boxthree){
                     isSpawnon = true; 
+                    HealthBar.health = HealthBar.health + 50f; 
+                    GameManager.score++;
                 }
             }
             if(isSpawnon){
