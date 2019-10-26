@@ -8,6 +8,10 @@ public class countDown : MonoBehaviour
 {
     public Text count; 
     int c = 3;
+    private void Awake() {
+        GameManager.isPaused = false;
+        GameManager.isGameOver = false;
+    }
     void Start(){
         count.text = "3";
         StartCoroutine("CountDown");

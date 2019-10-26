@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour
     public GameObject rankmenu;
 
     int level;
-    public static bool isGameOver = false;
-    public static bool isPaused = false;
+    public static bool isGameOver;
+    public static bool isPaused;
 
     private void Awake() {
         score = 0;
+        isGameOver = false;
+        isPaused = false;
     }
     void Start()
     {

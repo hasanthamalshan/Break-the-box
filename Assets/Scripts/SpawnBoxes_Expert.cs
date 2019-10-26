@@ -55,7 +55,7 @@ public class SpawnBoxes_Expert : MonoBehaviour
     }
     void Update()
     {   
-        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver) {
+        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver && !GameManager.isPaused) {
          int num1 = Random.Range(0,8);
          int num2 = Random.Range(0,8);
          int num3 = Random.Range(0,8);

@@ -26,7 +26,7 @@ public class SpawnBoxes_Easy : MonoBehaviour
     }
     void Update()
     {   
-        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver) {
+        if (Input.GetMouseButtonDown(0) && !GameManager.isGameOver && !GameManager.isPaused) {
          int num = Random.Range(0,8);
          Vector2 pos = Input.mousePosition;
          Collider2D hitCollider = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(pos));
