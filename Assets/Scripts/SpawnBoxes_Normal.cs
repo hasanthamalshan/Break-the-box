@@ -8,8 +8,10 @@ public class SpawnBoxes_Normal : MonoBehaviour
     public Transform bottomRight;
     public GameObject[] spawnee;
     static bool isSpawnon;
+
     bool boxone;
     bool boxtwo;
+
     GameObject obj1;
     GameObject obj2;
 
@@ -93,7 +95,7 @@ public class SpawnBoxes_Normal : MonoBehaviour
     }
 
     IEnumerator stopSparckles(){
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         sparkle.SetActive(false);
     }
 
