@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static int score;
-    public GameObject easy;
-    public GameObject normal;
-    public GameObject expert;
+
+    public static bool isEasy;
+    public static bool isNormal;
+    public static bool isExpert;
 
     public GameObject mainmenu;
     public GameObject settingsmenu;
@@ -50,4 +51,28 @@ public class GameManager : MonoBehaviour
         settingsmenu.SetActive(false);
         rankmenu.SetActive(true);
     }
+    
+    public void toMainMenu(){
+        mainmenu.SetActive(true);
+        settingsmenu.SetActive(false);
+        rankmenu.SetActive(false);
+    }
+
+    public void easyGame(){
+        isEasy = true;
+        isNormal = false;
+        isExpert = false;
+    }
+    public void normalGame(){
+        isEasy = false;
+        isNormal = true;
+        isExpert = false;
+    }
+    public void expertGame(){
+        isEasy = false;
+        isNormal = false;
+        isExpert = true;
+    }
+
+
 }
